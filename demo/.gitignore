@@ -39,4 +39,4 @@ build/
 #other
 .mvn/wrapper/
 mvnw
-.cmd
+mvnw.cmd
