@@ -35,3 +35,8 @@ build/
 .classpath
 .project
 .settings/
+
+#other
+.mvn/wrapper/
+.mvnw
+.mvnw.cmd
