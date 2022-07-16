@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,8 +20,9 @@ import com.example.demo.service.BookService;
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
-    private BookService bookService;
+    private final BookService bookService;
 
+    @Autowired
     public BookController(BookService bookService) {
         super();
         this.bookService = bookService;

@@ -16,8 +16,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "book")
-public class Book {
+@Table(name = "author")
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -25,7 +25,7 @@ public class Book {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "book", fetch = FetchType.LAZY, orphanRemoval = false)
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY, orphanRemoval = false)
     private List<BookAuthor> listBookAuthors = new ArrayList<>();
 
     public long getId() {
